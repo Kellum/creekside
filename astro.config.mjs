@@ -11,4 +11,8 @@ export default defineConfig({
     mode: 'standalone'
   }),
   integrations: [tailwind(), icon()],
+  server: {
+    port: Number(process.env.PORT) || 4321,
+    host: true
+  }
 });
