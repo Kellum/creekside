@@ -118,20 +118,48 @@ const currentPath = Astro.url.pathname;
   const menu = document.getElementById('mobile-menu');
   const menuContent = menu?.querySelector('ul');
 
-  button?.addEventListener('click', () => {
+  function closeMenu() {
+    if (!menu) return;
+    menu.style.maxHeight = '0';
+    menu.style.opacity = '0';
+  }
+
+  function openMenu() {
+    if (!menu || !menuContent) return;
+    const height = menuContent.scrollHeight || 0;
+    menu.style.maxHeight = height + 'px';
+    menu.style.opacity = '1';
+  }
+
+  function isMenuOpen() {
+    return menu?.style.maxHeight !== '0px' && menu?.style.maxHeight !== '';
+  }
+
+  button?.addEventListener('click', (e) => {
+    e.stopPropagation();
     if (!menu) return;
 
-    const isOpen = menu.style.maxHeight !== '0px' && menu.style.maxHeight !== '';
-
-    if (isOpen) {
-      // Close
-      menu.style.maxHeight = '0';
-      menu.style.opacity = '0';
+    if (isMenuOpen()) {
+      closeMenu();
     } else {
-      // Open
-      const height = menuContent?.scrollHeight || 0;
-      menu.style.maxHeight = height + 'px';
-      menu.style.opacity = '1';
+      openMenu();
     }
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menu || !button) return;
+
+    const target = e.target as Node;
+    const clickedOutside = !menu.contains(target) && !button.contains(target);
+
+    if (clickedOutside && isMenuOpen()) {
+      closeMenu();
+    }
+  });
+
+  // Prevent clicks inside menu from closing it
+  menu?.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
 </script>
