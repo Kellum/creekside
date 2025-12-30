@@ -1,0 +1,272 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark">
+    <Container>
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Contact & Directions
+        </h1>
+        <p class="text-lg text-white/90">
+          Find us in beautiful Jacksonville, North Florida
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Contact Info Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Contact Form -->
+        <div>
+          <form class="space-y-6 bg-white rounded-lg shadow-sm p-6 md:p-8">
+            <div class="mb-6">
+              <h2 class="text-2xl md:text-3xl font-bold text-gray-900">
+                Get In Touch
+              </h2>
+              <p class="text-gray-600 mt-2">
+                Send us a message and we'll respond as soon as possible
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2 text-gray-700">Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2 text-gray-700">Email *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
+              </div>
+              <div>
+                <label for="phone" class="block text-sm font-medium mb-2 text-gray-700">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-medium mb-2 text-gray-700">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2 text-gray-700">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <Button type="submit" variant="primary" size="lg">Send Message</Button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            We Look Forward to Hearing from You!
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p>
+              Whether you have questions about our park, want to make a reservation, or need directions, we're here to help! Our friendly staff is ready to assist you in planning your perfect RV getaway.
+            </p>
+            <p>
+              Feel free to give us a call, send an email, or stop by during office hours. We'll be happy to answer your questions and help you plan your stay at Creekside RV Park.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Address</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=11134+New+Kings+Rd+Jacksonville+FL+32219"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-primary hover:text-primary-dark hover:underline transition-colors"
+                >
+                  11134 New Kings Rd<br/>Jacksonville, FL 32219
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Phone</p>
+                <a
+                  href="tel:9049008304"
+                  class="text-primary hover:text-primary-dark hover:underline transition-colors"
+                >
+                  904-900-8304
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Email</p>
+                <a
+                  href="mailto:info@creekside-rv.com"
+                  class="text-primary hover:text-primary-dark hover:underline transition-colors"
+                >
+                  info@creekside-rv.com
+                </a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <svg class="w-6 h-6 text-primary flex-shrink-0 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <div>
+                <p class="font-semibold text-gray-900">Office Hours</p>
+                <p class="text-gray-600">Monday - Friday: 9:00am - 5:00pm<br/>Saturday - Sunday: 10:00am - 3:00pm</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Directions Section -->
+  <Section paddingY="lg" background="off-white">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Directions to Creekside RV Park
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Easy access from all major highways and interstates
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- From South Florida -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-xl font-semibold mb-4 text-primary">From South Florida</h3>
+          <div class="space-y-3 text-gray-600 text-sm leading-relaxed">
+            <p>
+              Take Florida's Turnpike (Toll) to Exit 259 toward SR-60/US-27. Follow signs onto US Highway 27 North toward Haines City and continue for approximately 15 miles. Take the exit onto I-4 West toward Tampa.
+            </p>
+            <p>
+              Continue on I-4 West for about 12 miles to Exit 32 (US-98 N/Lakeland). Turn right onto US-98 North and continue for 3 miles. Turn left onto Main Street and the park entrance will be on your right.
+            </p>
+            <p>
+              <strong>Total distance:</strong> Approximately 90 miles from Miami (2 hours)
+            </p>
+          </div>
+        </div>
+
+        <!-- From the North -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-xl font-semibold mb-4 text-primary">From the North</h3>
+          <div class="space-y-3 text-gray-600 text-sm leading-relaxed">
+            <p>
+              From I-75 South (Georgia/North Florida): Continue on I-75 South to Exit 301 (State Road 44/Wildwood). Merge onto FL-44 East and continue for approximately 35 miles until you reach US-98.
+            </p>
+            <p>
+              Turn right onto US-98 South and continue for approximately 8 miles. Turn right onto Main Street and look for the park entrance on your right after about 1 mile.
+            </p>
+            <p>
+              <strong>Alternative route:</strong> Take I-4 East from Tampa area to Exit 32 (US-98 N), then follow local directions above.
+            </p>
+          </div>
+        </div>
+
+        <!-- From the West Coast -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-xl font-semibold mb-4 text-primary">From the West Coast</h3>
+          <div class="space-y-3 text-gray-600 text-sm leading-relaxed">
+            <p>
+              From the Tampa/St. Petersburg area: Take I-4 East toward Orlando. Continue for approximately 30 miles to Exit 32 (US-98 N/Lakeland).
+            </p>
+            <p>
+              Turn right onto US-98 North and continue for 3 miles. Turn left onto Main Street. The park entrance will be on your right side after approximately 0.5 miles.
+            </p>
+            <p>
+              <strong>GPS Coordinates:</strong> Use these coordinates for most accurate navigation: 28.0395° N, 81.9498° W
+            </p>
+          </div>
+        </div>
+
+        <!-- From the East Coast -->
+        <div class="bg-white rounded-lg shadow-sm p-6">
+          <h3 class="text-xl font-semibold mb-4 text-primary">From the East Coast</h3>
+          <div class="space-y-3 text-gray-600 text-sm leading-relaxed">
+            <p>
+              From Orlando/East Coast beaches: Take I-4 West toward Tampa. Continue for approximately 35 miles to Exit 32 (US-98 N/Lakeland).
+            </p>
+            <p>
+              At the exit, turn right onto US-98 North. Continue on US-98 for approximately 3 miles. Turn left onto Main Street and watch for the park entrance on your right.
+            </p>
+            <p>
+              <strong>Note:</strong> From Orlando International Airport, the drive takes approximately 45 minutes via I-4 West. Perfect for fly-in RV rentals!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center bg-primary/5 rounded-lg p-6 border border-primary/20">
+        <p class="text-gray-700 leading-relaxed">
+          <strong>Need help finding us?</strong> Don't hesitate to call us at 904-900-8304 for turn-by-turn directions. Our staff is happy to guide you to our location!
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark text-center">
+    <Container size="md">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+        Ready to Book Your Stay?
+      </h2>
+      <p class="text-lg mb-8 text-white/90">
+        Contact us today to check availability and reserve your spot at Creekside RV Park
+      </p>
+      <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant="secondary" size="lg">Book Now</Button>
+    </Container>
+  </Section>
+</BaseLayout>

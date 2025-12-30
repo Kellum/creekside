@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark">
+    <Container>
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          About Us
+        </h1>
+        <p class="text-lg text-white/90">
+          Learn more about North Florida's premier RV park
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- About Content Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div>
+          <div class="aspect-[4/5] rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/creek.webp"
+              alt="Beautiful Florida scenery"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            Jacksonville's Favorite RV Park
+          </h2>
+          <h3 class="text-2xl font-semibold mb-4 text-primary">
+            About Creekside RV Park
+          </h3>
+          <div class="space-y-6 text-gray-600 leading-relaxed">
+            <p>
+              Located at 11134 New Kings Rd, Creekside RV Park is the ideal destination for both short and long-term renters seeking a relaxing getaway in Jacksonville, Florida. Our family-friendly and pet-friendly park offers a welcoming environment for everyone!
+            </p>
+
+            <div>
+              <h4 class="text-xl font-semibold mb-3 text-gray-900">Explore Our Amenities</h4>
+              <ul class="space-y-3">
+                <li>
+                  <strong>38 RV Lots:</strong> Each of our lots is equipped with essential amenities, including water, sewer, electric, and Wi-Fi hookups, ensuring a comfortable stay. Including 10 spacious pull-through RV sites.
+                </li>
+                <li>
+                  <strong>RV STORAGE:</strong> On-site RV storage available for added convenience and easy access between trips.
+                </li>
+                <li>
+                  <strong>Newly Renovated Facilities:</strong> Enjoy our newly renovated laundry room and bathhouse, conveniently located in the heart of the park.
+                </li>
+                <li>
+                  <strong>Recreational Areas:</strong> Take advantage of our picnic area, BBQ area, and playground—perfect for family gatherings and outdoor fun!
+                </li>
+                <li>
+                  <strong>Special Events & Food Trucks:</strong> Stay engaged with our special events calendar and enjoy weekly visits from local food trucks, bringing delicious meals right to your doorstep.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-xl font-semibold mb-3 text-gray-900">Direct Access to Dinsmore Boat Ramp & Park</h4>
+              <p>
+                Creekside has direct access to Dinsmore Boat Ramp and Park. Dinsmore Boat Ramp and Park is a peaceful North Florida riverfront destination known for its easy public boat access, scenic water views, and relaxed outdoor atmosphere. Popular with locals and visitors alike, the park offers a convenient launch for boating, fishing, and kayaking along the river, along with shaded areas perfect for picnicking or enjoying a quiet moment in nature. Surrounded by natural beauty and calm waters, Dinsmore Boat Ramp and Park is an ideal spot to watch the sunset, spend time on the water, or experience the slower pace and outdoor charm that make this area of Jacksonville so inviting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark text-center">
+    <Container size="md">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+        Plan Your RV Adventure Today!
+      </h2>
+      <p class="text-lg mb-8 text-white/90">
+        Experience the best of North Florida at Creekside RV Park
+      </p>
+      <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant="secondary" size="lg">Book Your Stay</Button>
+    </Container>
+  </Section>
+</BaseLayout>

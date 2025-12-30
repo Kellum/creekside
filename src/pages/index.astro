@@ -1,0 +1,426 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+import { Icon } from 'astro-icon/components';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/hero-bg.jpeg"
+        alt="Creekside RV Park"
+        class="w-full h-full object-cover"
+      />
+      <!-- Dark overlay for text readability -->
+      <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+    <Container>
+      <div class="relative z-10 text-center max-w-4xl mx-auto py-20">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+          Welcome to Creekside RV Park
+        </h1>
+        <p class="text-xl md:text-2xl lg:text-3xl mb-12 text-white drop-shadow-md">
+          A Convenient, Pet-Friendly RV Park in Jacksonville, Florida Designed for Easy Travel
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant="primary" size="lg">Book Your Stay</Button>
+          <Button href="/accommodations" variant="secondary" size="lg">View Accommodations</Button>
+        </div>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Stats Section -->
+  <Section background="primary" paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-5xl md:text-6xl font-bold mb-2 text-white">2021</div>
+          <div class="text-lg text-white/90">Year Established</div>
+        </div>
+        <div>
+          <div class="text-5xl md:text-6xl font-bold mb-2 text-white">365</div>
+          <div class="text-lg text-white/90">Open Year Round</div>
+        </div>
+        <div>
+          <div class="text-5xl md:text-6xl font-bold mb-2 text-white">65</div>
+          <div class="text-lg text-white/90">RV Sites</div>
+        </div>
+        <div>
+          <div class="text-5xl md:text-6xl font-bold mb-2 text-white">100%</div>
+          <div class="text-lg text-white/90">Customer Focused</div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Features Section -->
+  <Section background="off-white" paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Feature 1 -->
+        <Card class="text-center">
+          <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Spacious Sites</h3>
+          <p class="text-sm text-gray-600">
+            Full hookup sites with ample space for your RV and outdoor activities
+          </p>
+        </Card>
+
+        <!-- Feature 2 -->
+        <Card class="text-center">
+          <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Modern Amenities</h3>
+          <p class="text-sm text-gray-600">
+            WiFi, laundry, pool, and all the comforts of home
+          </p>
+        </Card>
+
+        <!-- Feature 3 -->
+        <Card class="text-center">
+          <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Natural Beauty</h3>
+          <p class="text-sm text-gray-600">
+            Scenic views and mature trees throughout the park
+          </p>
+        </Card>
+
+        <!-- Feature 4 -->
+        <Card class="text-center">
+          <div class="flex justify-center mb-4">
+            <svg class="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Prime Location</h3>
+          <p class="text-sm text-gray-600">
+            Close to attractions, shopping, and dining
+          </p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- About Preview Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img src="/dog-running-water.webp" alt="Creekside RV Park" class="w-full h-full object-cover" />
+          </div>
+        </div>
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-2 text-gray-900">
+            Welcome to Creekside RV Park in Jacksonville, FL
+          </h2>
+          <h3 class="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
+            Your Perfect Home Away from Home
+          </h3>
+          <div class="space-y-4 mb-8 text-gray-600">
+            <p>
+              Nestled in North Florida with easy access to I-95 and I-10, our pet-friendly RV park in Jacksonville, Florida offers a peaceful place to relax while staying close to top destinations. Guests enjoy easy travel days with pull-through RV sites, making arrival and departure simple for overnight stays and long-term rigs alike. Spend your time exploring nearby Jacksonville attractions like the Jacksonville Zoo and Gardens, cheering on the Jacksonville Jaguars at EverBank Stadium, or taking a scenic drive to Okefenokee Swamp Park. With quick routes to Florida beaches, historic towns, and local dining and shopping, our park is ideal for overnight travelers, long-term RV stays, work crews, families, and anyone seeking a quiet RV park with convenient access to everything Jacksonville has to offer.
+            </p>
+          </div>
+          <Button href="/about">Learn More About Us</Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Come Stay with Us Section -->
+  <Section background="off-white" paddingY="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Come Stay with Us!
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-1 gap-12">
+        <Card class="text-center">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200 mb-6">
+            <img src="/RV_MAP_original.webp" alt="RV Park Map" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-900">RV Park</h3>
+          <p class="text-gray-600 mb-6">
+            Discover a premier RV experience at Creekside RV Park in Jacksonville. Our fully-equipped RV park boasts modern facilities while providing an exotic natural backdrop, making it an idyllic stopover for all your RV travels.
+          </p>
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant="primary">Make a Reservation</Button>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Benefits of Choosing Us Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Benefits of Choosing Us
+        </h2>
+        <p class="text-xl text-gray-700 font-semibold">
+          Features & Amenities to Make Your Stay More Pleasant
+        </p>
+      </div>
+
+      <div class="max-w-6xl mx-auto mb-8">
+        <p class="text-gray-600 text-center mb-12">
+          At Creekside RV Park, we believe that top-class amenities add up to an unforgettable camping or RV vacation in Jacksonville. Our park comes packed with a wide range of superior features that have been thoughtfully designed for your comfort, convenience, and entertainment. We offer full RV hookups, to meticulously maintained washroom facilities, and organized recreational activities, we have left no stone unturned to ensure your stay is enjoyable and hassle-free. Plus, our park's close proximity to Jacksonville opens up a world of exploration and fun close by. Experience the fusion of nature's charm with modern amenities at Creekside RV Park. We promise a stay that's worth cherishing.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <!-- WiFi -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:wifi" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">WiFi internet access</span>
+          </div>
+
+          <!-- BBQ & Fire Pits -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:grill" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">BBQ grills & fire pits</span>
+          </div>
+
+          <!-- Wooded tent area -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:tent" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">Wooded tent area</span>
+          </div>
+
+          <!-- Coffee -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:coffee" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">Free coffee</span>
+          </div>
+
+          <!-- Clubhouse -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:office-building" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">Large clubhouse with A/C</span>
+          </div>
+
+          <!-- Kitchen -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:stove" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">Full kitchen facilities</span>
+          </div>
+
+          <!-- Ice -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:snowflake" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">Ice</span>
+          </div>
+
+          <!-- Firewood -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:tree" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">Firewood</span>
+          </div>
+
+          <!-- Fishing -->
+          <div class="flex flex-col items-center text-center p-4">
+            <Icon name="mdi:fish" class="w-12 h-12 mb-3 text-primary" />
+            <span class="text-sm font-medium text-gray-700">Fishing</span>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Area Attractions Section -->
+  <Section background="off-white" paddingY="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Area Attractions
+        </h2>
+        <p class="text-xl text-gray-700">
+          There are Plenty of Things to do near Jacksonville
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Major Attractions -->
+        <div class="text-center">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200 mb-6">
+            <img src="/st-augustine.jpeg" alt="Major Attractions" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900">Major Attractions</h3>
+          <p class="text-gray-600 text-sm">
+            Jacksonville is brimming with exciting local attractions. Immerse yourself in local culture, history, and arts with a flurry of museums, galleries, and landmarks just a short trip away from Creekside RV Park.
+          </p>
+        </div>
+
+        <!-- Shopping -->
+        <div class="text-center">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200 mb-6">
+            <img src="/shopping.webp" alt="Shopping" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900">Shopping</h3>
+          <p class="text-gray-600 text-sm">
+            Uncover the shopper in you with Jacksonville's vibrant retail landscape, situated just a stone's throw away from Creekside RV Park. From local boutiques to extensive malls, there's a shopping experience for every style and budget.
+          </p>
+        </div>
+
+        <!-- Restaurants & Dining -->
+        <div class="text-center">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200 mb-6">
+            <img src="/steak.webp" alt="Restaurants & Dining" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900">Restaurants & Dining</h3>
+          <p class="text-gray-600 text-sm">
+            Tempt your taste buds with an array of dining options right at Jacksonville's doorstep. Relish everything from delicious local fare to international cuisine while staying with us at Creekside RV Park.
+          </p>
+        </div>
+
+        <!-- Outdoor Activities -->
+        <div class="text-center">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200 mb-6">
+            <img src="/canoe.webp" alt="Outdoor Activities" class="w-full h-full object-cover" />
+          </div>
+          <h3 class="text-xl font-bold mb-4 text-gray-900">Outdoor Activities</h3>
+          <p class="text-gray-600 text-sm">
+            Explore the invigorating outdoor activities Jacksonville has to offer. From exhilarating hiking trails to serene fishing spots, the landscape surrounding Creekside RV Park caters to adventurers of all types.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <Button href="/things-to-do" variant="primary">Learn More</Button>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Reviews Section -->
+  <Section background="off-white" paddingY="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Read Our Reviews
+        </h2>
+        <p class="text-xl text-gray-700">
+          What People are Saying about Creekside RV Park
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Review 1 -->
+        <Card>
+          <div class="flex justify-center mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-600 text-center mb-4">
+            "We absolutely loved our stay at Creekside RV Park! The amenities were top-notch, the staff was friendly and helpful, and the scenic surroundings made it a truly memorable experience. We can't wait to come back next year!"
+          </blockquote>
+          <p class="text-center font-semibold text-gray-900">— Chris P.</p>
+        </Card>
+
+        <!-- Review 2 -->
+        <Card>
+          <div class="flex justify-center mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-600 text-center mb-4">
+            "As first-time RV campers, we were a bit nervous, but Creekside RV Park exceeded our expectations. The cleanliness of the facilities, the organized activities, and the welcoming atmosphere made our trip fantastic. Thank you for making our family vacation unforgettable!"
+          </blockquote>
+          <p class="text-center font-semibold text-gray-900">— Angela W.</p>
+        </Card>
+
+        <!-- Review 3 -->
+        <Card>
+          <div class="flex justify-center mb-4">
+            {[...Array(5)].map(() => (
+              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-600 text-center mb-4">
+            "We have traveled to many RV parks, but Creekside RV Park is by far the best. The spacious sites, well-maintained grounds, and beautiful nature trails provided the perfect setting for relaxation and adventure. We highly recommend your park to fellow RV enthusiasts!"
+          </blockquote>
+          <p class="text-center font-semibold text-gray-900">— Eddie R.</p>
+        </Card>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Contact Form Section -->
+  <Section paddingY="lg">
+    <Container size="md">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Get in Touch
+        </h2>
+        <p class="text-lg text-gray-600">
+          Give us a call or send us a message using the form below.
+        </p>
+      </div>
+
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium mb-2 text-gray-700">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium mb-2 text-gray-700">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+              required
+            />
+          </div>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium mb-2 text-gray-700">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"
+            required
+          ></textarea>
+        </div>
+        <div class="text-center">
+          <Button type="submit" variant="primary" size="lg">Send Message</Button>
+        </div>
+      </form>
+    </Container>
+  </Section>
+</BaseLayout>

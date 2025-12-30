@@ -1,0 +1,19 @@
+{
+  "name": "creekside-rv-sanity-studio",
+  "version": "1.0.0",
+  "description": "Sanity Studio for Creekside RV Park",
+  "type": "module",
+  "scripts": {
+    "dev": "sanity dev",
+    "start": "sanity start",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sanity": "^3.64.2",
+    "@sanity/vision": "^3.64.2"
+  }
+}

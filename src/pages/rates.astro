@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import Card from '../components/Card.astro';
+
+const pricingTiers = [
+  {
+    name: 'Daily Rate',
+    price: '$60',
+    period: 'per night',
+    features: [
+      'Full hookups (water, electric, sewer)',
+      '30/50 amp service',
+      'WiFi access',
+      'Access to all park amenities',
+      'Pet friendly',
+      'Pull-through or back-in sites',
+    ],
+  },
+  {
+    name: 'Weekly Rate',
+    price: '$275',
+    period: 'per week',
+    featured: true,
+    features: [
+      'All daily rate amenities',
+      'Discounted weekly pricing',
+      'Full hookups included',
+      'Extended stay flexibility',
+      'Access to clubhouse',
+      'Laundry facilities',
+    ],
+  },
+  {
+    name: 'Monthly Rate',
+    price: '$750',
+    period: 'per month',
+    features: [
+      'Best value for long-term stays',
+      'All park amenities included',
+      'Priority site selection',
+      'Flexible month-to-month terms',
+      'Storage options available',
+      'Community events',
+    ],
+  },
+];
+
+const parkRules = [
+  {
+    title: 'Guest and Visitors',
+    content: 'All guests and visitors must register at the office. Guests are welcome during daylight hours. Overnight guests require prior approval and may be subject to additional fees. All visitors must follow park rules and regulations.',
+  },
+  {
+    title: 'Pets',
+    content: 'We welcome pets! All pets must be leashed when outside your RV. Please clean up after your pets immediately. Pets should not be left unattended outside. Some breed restrictions may apply. Maximum of 2 pets per site without prior approval.',
+  },
+  {
+    title: 'Quiet Hours',
+    content: 'Quiet hours are from 10:00 PM to 8:00 AM daily. Please be respectful of your neighbors and keep noise levels to a minimum during these hours. Generators must be turned off during quiet hours.',
+  },
+  {
+    title: 'Speed Limit',
+    content: 'The speed limit throughout the park is 5 MPH. Please drive slowly and watch for children, pets, and pedestrians. Golf carts and bicycles must also observe the speed limit.',
+  },
+  {
+    title: 'Parking',
+    content: 'One RV and one vehicle are included with each site. Additional vehicles must be approved and parked in designated areas. Commercial vehicles and trailers require special permission.',
+  },
+  {
+    title: 'Fires',
+    content: 'Campfires are permitted only in designated fire rings or grills. Never leave fires unattended. Fires must be completely extinguished before leaving your site or retiring for the night. Fireworks are strictly prohibited.',
+  },
+  {
+    title: 'Trash and Recycling',
+    content: 'Please dispose of trash in designated receptacles. Recycling bins are located throughout the park. Do not leave trash outside your RV. Help us keep our park clean and beautiful.',
+  },
+  {
+    title: 'Site Maintenance',
+    content: 'Please keep your site clean and tidy. Do not dig holes or trenches. Decorations and outdoor items should be tasteful and not interfere with neighboring sites. Clotheslines must be approved.',
+  },
+  {
+    title: 'Swimming Pool',
+    content: 'Pool hours are posted at the facility. Children under 12 must be supervised by an adult. No glass containers in pool area. Proper swimming attire required. Follow all posted pool rules.',
+  },
+  {
+    title: 'Check-in and Check-out',
+    content: 'Check-in time is 2:00 PM. Check-out time is 11:00 AM. Early check-in or late check-out may be available upon request and subject to availability. Please notify the office of your expected arrival time.',
+  },
+];
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark">
+    <Container>
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Rates
+        </h1>
+        <p class="text-lg text-white/90">
+          Affordable pricing for short-term and long-term stays
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Pricing Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Rates & Pricing
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Choose the rate that best fits your travel plans. All rates include full hookups and access to park amenities.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {pricingTiers.map((tier) => (
+          <Card class={tier.featured ? 'border-2 border-primary relative' : ''}>
+            {tier.featured && (
+              <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular
+                </span>
+              </div>
+            )}
+            <div class="text-center mb-6">
+              <h3 class="text-2xl font-bold mb-2 text-gray-900">{tier.name}</h3>
+              <div class="mb-2">
+                <span class="text-4xl font-bold text-primary">{tier.price}</span>
+              </div>
+              <p class="text-gray-600">{tier.period}</p>
+            </div>
+            <ul class="space-y-3 mb-8">
+              {tier.features.map((feature) => (
+                <li class="flex items-start gap-2">
+                  <svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span class="text-sm text-gray-700">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant={tier.featured ? 'primary' : 'outline'} class="w-full">
+              Book Now
+            </Button>
+          </Card>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <p class="text-gray-600 mb-4">
+          Rates are subject to change based on season and availability. Please contact us for current rates and special offers.
+        </p>
+        <Button href="/contact" variant="outline">Contact Us for Details</Button>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Policies and Cancellations -->
+  <Section paddingY="lg" background="off-white">
+    <Container size="md">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          Policies and Cancellations
+        </h2>
+        <p class="text-lg text-gray-600">
+          Please review our policies before making a reservation
+        </p>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm p-6 md:p-8 space-y-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">Reservation Policy</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Rates are for 2 adults and 2 children per site. Additional guests may be subject to extra fees. A deposit is required at time of booking and will be applied toward your first night's stay (3-day minimum for special events and peak season).
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">Cancellation Policy</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Cancellations made 7 days or more prior to arrival will receive a full refund minus a processing fee. Cancellations made less than 7 days prior to arrival will forfeit the deposit. No-shows will be charged for the full reservation. Special event and holiday reservations may have different cancellation policies.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">Payment Terms</h3>
+          <p class="text-gray-600 leading-relaxed">
+            We accept all major credit cards, debit cards, and cash. Payment is due at check-in for daily and weekly rates. Monthly rates are due on the first of each month. A valid credit card must be kept on file for all extended stays.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-semibold mb-3 text-gray-900">Age Requirements</h3>
+          <p class="text-gray-600 leading-relaxed">
+            All guests must be at least 21 years of age to register and rent a site. Valid government-issued ID is required at check-in.
+          </p>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- RV Park Rules & Regulations -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          RV Park Rules & Regulations
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          To ensure a pleasant experience for all guests, please observe the following rules and regulations
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {parkRules.map((rule) => (
+          <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
+            <h3 class="text-lg font-semibold mb-3 text-gray-900">{rule.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{rule.content}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center bg-primary/5 rounded-lg p-6 border border-primary/20">
+        <p class="text-gray-700 leading-relaxed">
+          <strong>Please Note:</strong> Management reserves the right to refuse service to anyone and to evict any guest who does not comply with park rules and regulations. Guests who cause damage to park property or disturb other guests will be asked to leave without refund. By staying at Creekside RV Park, you agree to follow all posted rules and regulations.
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark text-center">
+    <Container size="md">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+        Plan Your RV Adventure Today!
+      </h2>
+      <p class="text-lg mb-8 text-white/90">
+        Contact us for current rates and availability. We look forward to welcoming you to Creekside RV Park!
+      </p>
+      <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant="secondary" size="lg">Reserve Your Spot</Button>
+    </Container>
+  </Section>
+</BaseLayout>

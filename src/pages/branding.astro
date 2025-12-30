@@ -1,0 +1,350 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Branding & Style Guide - Creekside RV Park" description="Brand guidelines and design system for Creekside RV Park">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <!-- Header -->
+    <div class="mb-16">
+      <h1 class="text-5xl font-bold mb-4" style="color: var(--color-gray-900);">Creekside RV Park</h1>
+      <p class="text-xl" style="color: var(--color-gray-600);">Branding & Design System</p>
+      <p class="mt-4" style="color: var(--color-gray-500);">
+        This page serves as a reference for designers and developers working on the Creekside RV Park website.
+        It documents our color palette, typography, spacing system, and design principles.
+      </p>
+    </div>
+
+    <!-- Design Principles -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6" style="color: var(--color-gray-800);">Design Principles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <h3 class="text-xl font-semibold mb-2">Modern & Minimal</h3>
+          <p style="color: var(--color-gray-600);">Clean lines, generous white space, and subtle animations create a contemporary feel.</p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <h3 class="text-xl font-semibold mb-2">Consistent Spacing</h3>
+          <p style="color: var(--color-gray-600);">All spacing follows an 8px grid system for visual harmony.</p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <h3 class="text-xl font-semibold mb-2">Strategic Color Use</h3>
+          <p style="color: var(--color-gray-600);">Blue accents are used thoughtfully, not overwhelming the design.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Palette -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6" style="color: var(--color-gray-800);">Color Palette</h2>
+
+      <!-- Primary Colors -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4" style="color: var(--color-gray-700);">Primary Colors</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="space-y-3">
+            <div class="h-32 rounded-lg shadow-md flex items-center justify-center" style="background-color: var(--color-primary);">
+              <span class="text-white font-mono text-sm">#2563EB</span>
+            </div>
+            <div>
+              <p class="font-semibold">Primary Blue</p>
+              <p class="text-sm font-mono" style="color: var(--color-gray-600);">#2563EB</p>
+              <p class="text-sm" style="color: var(--color-gray-500);">Main CTA buttons, links, headers</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="h-32 rounded-lg shadow-md flex items-center justify-center" style="background-color: var(--color-primary-light);">
+              <span class="text-white font-mono text-sm">#3B82F6</span>
+            </div>
+            <div>
+              <p class="font-semibold">Blue Accent</p>
+              <p class="text-sm font-mono" style="color: var(--color-gray-600);">#3B82F6</p>
+              <p class="text-sm" style="color: var(--color-gray-500);">Hover states, highlights</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="h-32 rounded-lg shadow-md flex items-center justify-center" style="background-color: var(--color-primary-dark);">
+              <span class="text-white font-mono text-sm">#1E40AF</span>
+            </div>
+            <div>
+              <p class="font-semibold">Dark Blue</p>
+              <p class="text-sm font-mono" style="color: var(--color-gray-600);">#1E40AF</p>
+              <p class="text-sm" style="color: var(--color-gray-500);">Text on blue backgrounds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Neutral Colors -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4" style="color: var(--color-gray-700);">Neutral Colors</h3>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+          <div class="space-y-2">
+            <div class="h-20 rounded-lg shadow-sm border" style="background-color: var(--color-white);"></div>
+            <p class="text-xs font-semibold">White</p>
+            <p class="text-xs font-mono" style="color: var(--color-gray-600);">#FFFFFF</p>
+          </div>
+          <div class="space-y-2">
+            <div class="h-20 rounded-lg shadow-sm" style="background-color: var(--color-off-white);"></div>
+            <p class="text-xs font-semibold">Off-White</p>
+            <p class="text-xs font-mono" style="color: var(--color-gray-600);">#FAFAFA</p>
+          </div>
+          <div class="space-y-2">
+            <div class="h-20 rounded-lg shadow-sm" style="background-color: var(--color-gray-100);"></div>
+            <p class="text-xs font-semibold">Light Gray</p>
+            <p class="text-xs font-mono" style="color: var(--color-gray-600);">#F3F4F6</p>
+          </div>
+          <div class="space-y-2">
+            <div class="h-20 rounded-lg shadow-sm" style="background-color: var(--color-gray-500);"></div>
+            <p class="text-xs font-semibold">Medium Gray</p>
+            <p class="text-xs font-mono" style="color: var(--color-gray-600);">#6B7280</p>
+          </div>
+          <div class="space-y-2">
+            <div class="h-20 rounded-lg shadow-sm" style="background-color: var(--color-gray-800);"></div>
+            <p class="text-xs font-semibold">Dark Gray</p>
+            <p class="text-xs font-mono text-white">#1F2937</p>
+          </div>
+        </div>
+        <p class="text-sm mt-4" style="color: var(--color-gray-500);">
+          <strong>Usage:</strong> White/Off-white for backgrounds (80% of design), gray tones for text hierarchy and subtle UI elements.
+        </p>
+      </div>
+
+      <!-- Accent Colors -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4" style="color: var(--color-gray-700);">Accent Colors</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="space-y-3">
+            <div class="h-32 rounded-lg shadow-md flex items-center justify-center" style="background-color: var(--color-green);">
+              <span class="text-white font-mono text-sm">#059669</span>
+            </div>
+            <div>
+              <p class="font-semibold">Forest Green</p>
+              <p class="text-sm font-mono" style="color: var(--color-gray-600);">#059669</p>
+              <p class="text-sm" style="color: var(--color-gray-500);">Subtle outdoor/nature connection, success states</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="h-32 rounded-lg shadow-md flex items-center justify-center" style="background-color: var(--color-sand);">
+              <span class="text-white font-mono text-sm">#D97706</span>
+            </div>
+            <div>
+              <p class="font-semibold">Warm Sand</p>
+              <p class="text-sm font-mono" style="color: var(--color-gray-600);">#D97706</p>
+              <p class="text-sm" style="color: var(--color-gray-500);">Important CTAs (reduces blue fatigue)</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div class="h-32 rounded-lg shadow-md flex items-center justify-center" style="background-color: #3570ed;">
+              <span class="text-white font-mono text-sm">#3570ED</span>
+            </div>
+            <div>
+              <p class="font-semibold">Link Blue</p>
+              <p class="text-sm font-mono" style="color: var(--color-gray-600);">#3570ED</p>
+              <p class="text-sm" style="color: var(--color-gray-500);">Hyperlinks, clickable text (slightly brighter than primary blue)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6" style="color: var(--color-gray-800);">Typography</h2>
+      <div class="space-y-6">
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <h1 class="text-5xl font-bold mb-2">Heading 1 - 48px</h1>
+          <p class="text-sm font-mono" style="color: var(--color-gray-600);">font-size: 3rem (48px) | font-weight: 700</p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <h2 class="text-4xl font-bold mb-2">Heading 2 - 36px</h2>
+          <p class="text-sm font-mono" style="color: var(--color-gray-600);">font-size: 2.25rem (36px) | font-weight: 700</p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <h3 class="text-2xl font-semibold mb-2">Heading 3 - 24px</h3>
+          <p class="text-sm font-mono" style="color: var(--color-gray-600);">font-size: 1.5rem (24px) | font-weight: 600</p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <p class="text-lg mb-2">Body Large - 18px</p>
+          <p class="text-sm font-mono" style="color: var(--color-gray-600);">font-size: 1.125rem (18px) | font-weight: 400</p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <p class="text-base mb-2">Body Regular - 16px</p>
+          <p class="text-sm font-mono" style="color: var(--color-gray-600);">font-size: 1rem (16px) | font-weight: 400</p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <p class="text-sm mb-2">Body Small - 14px</p>
+          <p class="text-xs font-mono" style="color: var(--color-gray-600);">font-size: 0.875rem (14px) | font-weight: 400</p>
+        </div>
+      </div>
+      <p class="text-sm mt-4" style="color: var(--color-gray-500);">
+        <strong>Font Family:</strong> System UI fonts (SF Pro on Apple devices, Segoe UI on Windows, Roboto on Android)
+      </p>
+    </section>
+
+    <!-- Spacing System -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6" style="color: var(--color-gray-800);">Spacing System (8px Grid)</h2>
+      <div class="space-y-4">
+        <div class="flex items-center gap-4">
+          <div class="w-16 h-16 flex items-center justify-center rounded" style="background-color: var(--color-primary); color: white;">8px</div>
+          <div>
+            <p class="font-semibold">spacing-1</p>
+            <p class="text-sm font-mono" style="color: var(--color-gray-600);">0.5rem / 8px</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-32 h-16 flex items-center justify-center rounded" style="background-color: var(--color-primary); color: white;">16px</div>
+          <div>
+            <p class="font-semibold">spacing-2</p>
+            <p class="text-sm font-mono" style="color: var(--color-gray-600);">1rem / 16px</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-48 h-16 flex items-center justify-center rounded" style="background-color: var(--color-primary); color: white;">24px</div>
+          <div>
+            <p class="font-semibold">spacing-3</p>
+            <p class="text-sm font-mono" style="color: var(--color-gray-600);">1.5rem / 24px</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <div class="w-64 h-16 flex items-center justify-center rounded" style="background-color: var(--color-primary); color: white;">32px</div>
+          <div>
+            <p class="font-semibold">spacing-4</p>
+            <p class="text-sm font-mono" style="color: var(--color-gray-600);">2rem / 32px</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+          <div class="p-4 rounded-lg" style="background-color: var(--color-gray-50);">
+            <p class="font-semibold mb-2">Larger Spacing</p>
+            <ul class="text-sm space-y-1" style="color: var(--color-gray-600);">
+              <li><span class="font-mono">spacing-6:</span> 3rem / 48px</li>
+              <li><span class="font-mono">spacing-8:</span> 4rem / 64px</li>
+              <li><span class="font-mono">spacing-12:</span> 6rem / 96px</li>
+              <li><span class="font-mono">spacing-16:</span> 8rem / 128px</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-lg" style="background-color: var(--color-gray-50);">
+            <p class="font-semibold mb-2">Usage Guidelines</p>
+            <ul class="text-sm space-y-1" style="color: var(--color-gray-600);">
+              <li>• Use consistent spacing throughout</li>
+              <li>• Sections: 64-128px vertical spacing</li>
+              <li>• Elements: 16-32px spacing</li>
+              <li>• Never use random pixel values</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Button Styles -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6" style="color: var(--color-gray-800);">Button Styles</h2>
+      <div class="space-y-6">
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <button
+            class="px-6 py-3 rounded-lg font-semibold transition-colors"
+            style="background-color: var(--color-primary); color: white;"
+          >
+            Primary Button
+          </button>
+          <p class="text-sm mt-3" style="color: var(--color-gray-600);">
+            <strong>Use:</strong> Main actions, booking CTA<br>
+            <strong>Style:</strong> Primary blue background, white text, rounded-lg
+          </p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <button
+            class="px-6 py-3 rounded-lg font-semibold transition-colors"
+            style="background-color: var(--color-sand); color: white;"
+          >
+            Secondary Button
+          </button>
+          <p class="text-sm mt-3" style="color: var(--color-gray-600);">
+            <strong>Use:</strong> Important alternative actions<br>
+            <strong>Style:</strong> Warm sand background, white text, rounded-lg
+          </p>
+        </div>
+        <div class="p-6 rounded-lg" style="background-color: var(--color-gray-50);">
+          <button
+            class="px-6 py-3 rounded-lg font-semibold transition-colors border-2"
+            style="border-color: var(--color-primary); color: var(--color-primary); background-color: transparent;"
+          >
+            Outline Button
+          </button>
+          <p class="text-sm mt-3" style="color: var(--color-gray-600);">
+            <strong>Use:</strong> Secondary actions, "Learn More" links<br>
+            <strong>Style:</strong> Transparent background, primary border, primary text
+          </p>
+        </div>
+      </div>
+      <div class="mt-6 p-4 rounded-lg" style="background-color: #FEF3C7;">
+        <p class="text-sm"><strong>⚠️ CTA Strategy:</strong> Maximum 1 primary CTA per section to avoid overwhelming users.</p>
+      </div>
+    </section>
+
+    <!-- Component Examples -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6" style="color: var(--color-gray-800);">Component Examples</h2>
+
+      <!-- Card -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">Card Component</h3>
+        <div class="p-6 rounded-lg shadow-md" style="background-color: var(--color-white);">
+          <h4 class="text-xl font-semibold mb-2">Card Title</h4>
+          <p style="color: var(--color-gray-600);">Card content goes here. Cards use white background with subtle shadow.</p>
+        </div>
+        <p class="text-sm mt-3" style="color: var(--color-gray-500);">
+          <strong>Style:</strong> White background, rounded-lg, shadow-md, padding: 1.5rem
+        </p>
+      </div>
+
+      <!-- Section Container -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">Section Container</h3>
+        <div class="p-16 rounded-lg" style="background-color: var(--color-off-white);">
+          <p class="text-center" style="color: var(--color-gray-600);">Sections use off-white or white backgrounds with generous padding</p>
+        </div>
+        <p class="text-sm mt-3" style="color: var(--color-gray-500);">
+          <strong>Style:</strong> max-width: 1280px, padding: 64px vertical, 16-32px horizontal
+        </p>
+      </div>
+    </section>
+
+    <!-- Best Practices -->
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-6" style="color: var(--color-gray-800);">Best Practices</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-6 rounded-lg border-2" style="border-color: var(--color-green); background-color: #F0FDF4;">
+          <h3 class="text-xl font-semibold mb-4" style="color: var(--color-green);">✓ Do</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• Use generous white space between sections</li>
+            <li>• Stick to the 8px spacing grid</li>
+            <li>• Limit to 1 primary CTA per section</li>
+            <li>• Balance blue with neutral backgrounds</li>
+            <li>• Ensure text has proper contrast ratios</li>
+            <li>• Use semantic HTML elements</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-lg border-2" style="border-color: #DC2626; background-color: #FEF2F2;">
+          <h3 class="text-xl font-semibold mb-4" style="color: #DC2626;">✗ Don't</h3>
+          <ul class="space-y-2 text-sm">
+            <li>• Use wave separators or gimmicky effects</li>
+            <li>• Use random spacing values (stick to grid)</li>
+            <li>• Overuse blue (avoid blue fatigue)</li>
+            <li>• Cram sections together without spacing</li>
+            <li>• Use more than 2-3 CTAs in one view</li>
+            <li>• Use generic stock photos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t" style="border-color: var(--color-gray-200);">
+      <p class="text-center text-sm" style="color: var(--color-gray-500);">
+        This branding guide ensures consistency across the Creekside RV Park website.<br>
+        Last updated: December 2025
+      </p>
+    </footer>
+  </main>
+</BaseLayout>

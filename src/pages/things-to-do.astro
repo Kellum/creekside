@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark">
+    <Container>
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Things to Do
+        </h1>
+        <p class="text-lg text-white/90">
+          Explore the best of North Florida from your home base at Creekside
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Conveniently Located Section -->
+  <Section paddingY="lg" background="off-white">
+    <Container size="md">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+          Conveniently Located!
+        </h2>
+        <div class="max-w-7xl mx-auto">
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Creekside RV Park is perfectly positioned for easy access to Jacksonville's best attractions, beautiful beaches, and North Florida destinations.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://www.visitjacksonville.com/downtown/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Downtown Jacksonville</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">15 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://www.jaguars.com/stadium/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">EverBank Stadium (Home of the Jacksonville Jaguars)</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">15 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://jacksonvillezoo.org/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Jacksonville Zoo and Gardens</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">15 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://www.flyjax.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Jacksonville International Airport (JAX)</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">12 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://ufhealthjax.org/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">UF Health Jacksonville</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">15 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://www.mayoclinic.org/locations/florida" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Mayo Clinic Jacksonville</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">45 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://cnrse.cnic.navy.mil/Installations/NAS-Jacksonville/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Jacksonville Naval Air Station (NAS JAX)</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">25 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://cnrse.cnic.navy.mil/Installations/NS-Mayport/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Naval Station Mayport</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">45 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://www.simon.com/mall/st-johns-town-center" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">St. Johns Town Center</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">35 minutes</span>
+            </div>
+            <div class="flex justify-between items-center py-3 px-4 bg-white rounded-lg border border-gray-200 hover:border-link/30 transition-colors">
+              <a href="https://ameliaisland.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Fernandina Beach & Amelia Island</a>
+              <span class="text-primary font-semibold ml-4 whitespace-nowrap">45 minutes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Major Attractions Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            Major Attractions
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p>
+              <strong><a href="https://everbankstadium.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">EVERBANK STADIUM</a>:</strong> Home of the Jaguars and the heart of Jacksonville's biggest games, concerts, and events.
+            </p>
+            <p>
+              <strong><a href="https://www.dailysplace.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">DAILY'S PLACE</a>:</strong> A modern amphitheater where live music and great vibes come together under the Jacksonville sky.
+            </p>
+            <p>
+              <strong><a href="https://arena.jaxevents.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">VYSTAR VETERANS MEMORIAL ARENA</a>:</strong> Jacksonville's go-to venue for unforgettable concerts, games, and live events.
+            </p>
+            <p>
+              <strong><a href="https://www.cummermuseum.org/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">CUMMER MUSEUM OF ARTS & GARDENS</a>:</strong> Art, gardens, and river views in one beautiful, peaceful setting.
+            </p>
+            <p>
+              <strong><a href="https://riversideartsmarket.org/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">RIVERSIDE ARTS MARKET</a>:</strong> Local art, food, and music along the river every weekend.
+            </p>
+            <p>
+              <strong><a href="https://www.visitstaugustine.com/regions/historic-downtown" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">HISTORIC ST. AUGUSTINE</a>:</strong> Charming streets, rich history, and timeless Florida character.
+            </p>
+          </div>
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer">Book Your Stay</Button>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/creek.webp"
+              alt="Jacksonville area attractions"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Shopping Section -->
+  <Section paddingY="lg" background="off-white">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div class="order-2 lg:order-1">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/creek.webp"
+              alt="Shopping in Jacksonville"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="order-1 lg:order-2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            Shopping
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p>
+              <strong><a href="https://www.simon.com/mall/st-johns-town-center" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">St. Johns Town Center</a>:</strong> Upscale shopping, dining, and entertainment all in one vibrant outdoor setting.
+            </p>
+            <p>
+              <strong><a href="https://www.simon.com/mall/the-avenues" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Avenues Mall</a>:</strong> A classic indoor mall with a wide variety of shops and dining options.
+            </p>
+            <p>
+              <strong><a href="https://www.premiumoutlets.com/outlet/st-augustine" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">St. Augustine Premium Outlet</a>:</strong> Top brands at great prices, just minutes from historic St. Augustine.
+            </p>
+            <p>
+              <strong><a href="https://mysanmarco.com/shop/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Shops at San Marco</a>:</strong> Charming boutiques, great dining, and a relaxed neighborhood vibe.
+            </p>
+            <p>
+              <strong><a href="https://www.visitjacksonville.com/things-to-do/shopping/boutiques/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">Boutiques of Jacksonville</a>:</strong> Unique local shops offering one-of-a-kind finds and local flair.
+            </p>
+            <p>
+              <strong><a href="https://rivercitymarketplace.shopkimco.com/stores" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">River City Marketplace</a>:</strong> Convenient shopping, dining, and entertainment close to the airport.
+            </p>
+          </div>
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer">Book Your Stay</Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Restaurants & Dining Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            Restaurants & Dining
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p>
+              <strong><a href="http://www.thebeardedpigbbq.com" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">THE BEARDED PIG</a>:</strong> Top BBQ spot with great smoked meats and sides.
+            </p>
+            <p>
+              <strong><a href="https://www.palmsfishcamp.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">PALMS FISH CAMP</a>:</strong> Classic fish camp experience with local seafood favorites.
+            </p>
+            <p>
+              <strong><a href="https://wickedbarley.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">WICKED BARLEY BREWING COMPANY</a>:</strong> Popular American restaurant with great ambiance and menu options.
+            </p>
+            <p>
+              <strong><a href="https://www.eatatlanopalera.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">LA NOPALERA</a>:</strong> Traditional Mexican comfort food in a relaxed setting.
+            </p>
+            <p>
+              <strong><a href="https://www.thesoulfoodbistro.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">SOUL FOOD BISTRO</a>:</strong> Jacksonville classic for Southern comfort food.
+            </p>
+          </div>
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer">Book Your Stay</Button>
+        </div>
+
+        <!-- Image -->
+        <div>
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/creek.webp"
+              alt="Dining in Jacksonville"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Outdoor Activities Section -->
+  <Section paddingY="lg" background="off-white">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div class="order-2 lg:order-1">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/creek.webp"
+              alt="Outdoor activities in Florida"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="order-1 lg:order-2">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            Outdoor Activities
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p>
+              <strong><a href="https://www.jacksonville.gov/departments/parks-and-recreation/recreation-and-community-programming/parks/dinsmore-boat-ramp" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">DINSMORE BOAT RAMP & PARK</a>:</strong> Just across the street, Easy river access, peaceful views, and a great spot to enjoy the water.
+            </p>
+            <p>
+              <strong><a href="https://okeswamp.org/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">OKENFENOKEE SWAP PARK</a>:</strong> A one-of-a-kind glimpse into wild Florida, filled with cypress trees, boardwalks, and unforgettable wildlife.
+            </p>
+            <p>
+              <strong><a href="https://www.jacksonvillezoo.org/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">JACKSONVILLE ZOO & BOTANICAL GARDENS</a>:</strong> A fun, educational adventure where wildlife, gardens, and family memories come together.
+            </p>
+            <p>
+              <strong><a href="https://cattyshack.org/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">CATTY SHACK RANCH WILDLIFE SANCTUARY</a>:</strong> Rescue sanctuary for tigers & big cats.
+            </p>
+            <p>
+              <strong><a href="https://www.sjrwmd.com/lands/recreation/thomas-creek/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">THOMAS CREEK CONSERVATION AREA</a>:</strong> Peaceful wooded trails and wildlife.
+            </p>
+            <p>
+              <strong><a href="https://www.floridastateparks.org/parks-and-trails/pumpkin-hill-creek-preserve-state-park" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">PUMPKIN HILL STATE PARK</a>:</strong> Beautiful marsh + forest hiking.
+            </p>
+            <p>
+              <strong><a href="https://www.jacksonville.gov/departments/parks-and-recreation/recreation-and-community-programming/preservation-parks/betz-tiger-point-preserve" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">BETZ-TIGER POINT PRESERVE</a>:</strong> One of the prettiest hidden natural areas in Jax.
+            </p>
+            <p>
+              <strong><a href="https://www.floridastateparks.org/fortclinch" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">FORT CLINCH STATE PARK</a>:</strong> AMAZING fort, fishing pier, trails, and beaches.
+            </p>
+            <p>
+              <strong><a href="https://www.fbfl.us/1097/Amelia-Island-Lighthouse" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">AMEILA ISLAND LIGHTHOUSE</a>:</strong> One of the oldest in Florida.
+            </p>
+            <p>
+              <strong><a href="https://www.floridastateparks.org/parks-and-trails/little-talbot-island-state-park" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">LITTLE & BIG TALBOT ISLAND</a>:</strong> Untouched beaches, wild beauty, and some of the most peaceful coastal views in Northeast Florida.
+            </p>
+            <p>
+              <strong><a href="https://ameliarivercruises.com/" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">AMELIA RIVER CRUISES</a>:</strong> A relaxing boat ride with beautiful views, local history, and the chance to spot dolphins along the way.
+            </p>
+            <p>
+              <strong><a href="https://www.fdacs.gov/Forest-Wildfire/Our-Forests/State-Forests/Jennings-State-Forest" target="_blank" rel="noopener noreferrer" class="text-link hover:text-link-dark underline transition-colors">JENNINGS STATE PARK</a>:</strong> Peaceful trails, wide-open forest, and a true escape into nature.
+            </p>
+          </div>
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer">Book Your Stay</Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark text-center">
+    <Container size="md">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+        Plan Your RV Adventure Today!
+      </h2>
+      <p class="text-lg mb-8 text-white/90">
+        Make Creekside RV Park your home base for exploring all that Jacksonville and North Florida has to offer
+      </p>
+      <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant="secondary" size="lg">Book Your Stay</Button>
+    </Container>
+  </Section>
+</BaseLayout>

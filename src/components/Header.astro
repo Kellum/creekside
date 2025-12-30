@@ -1,0 +1,104 @@
+---
+import Container from './Container.astro';
+
+const navLinks = [
+  { href: '/accommodations', label: 'Accommodations' },
+  { href: '/amenities', label: 'Amenities' },
+  { href: '/things-to-do', label: 'Things to Do' },
+  { href: '/rates', label: 'Rates' },
+  { href: '/about', label: 'About' },
+  { href: '/faq', label: 'FAQ' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 shadow-sm bg-white">
+  <Container>
+    <nav class="flex items-center justify-between py-4">
+      <!-- Logo and Contact Info -->
+      <div class="flex items-center gap-4">
+        <a href="/" class="flex items-center">
+          <img src="/logo.webp" alt="Creekside RV Park Logo" class="h-12 w-auto" />
+        </a>
+        <div class="hidden lg:block text-sm">
+          <p class="font-semibold text-gray-900">904-900-8304</p>
+          <p class="text-gray-600">11134 New Kings Rd, Jacksonville 32219</p>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex items-center space-x-6">
+        {navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class={`text-sm font-medium transition-colors hover:text-primary ${
+                currentPath === link.href ? 'text-primary font-bold' : 'text-gray-700'
+              }`}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- CTA Button -->
+      <div class="hidden md:block">
+        <a
+          href="#book"
+          class="px-6 py-2 rounded-lg font-semibold text-white bg-sand transition-opacity hover:opacity-90"
+        >
+          Book Now
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="mobile-menu-button"
+        class="md:hidden p-2"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <ul class="space-y-3">
+        {navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class={`block py-2 text-base font-medium transition-colors hover:text-primary ${
+                currentPath === link.href ? 'text-primary' : 'text-gray-700'
+              }`}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+        <li>
+          <a
+            href="#book"
+            class="block w-full text-center px-6 py-3 rounded-lg font-semibold text-white bg-sand"
+          >
+            Book Now
+          </a>
+        </li>
+      </ul>
+    </div>
+  </Container>
+</header>
+
+<script>
+  const button = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  button?.addEventListener('click', () => {
+    menu?.classList.toggle('hidden');
+  });
+</script>

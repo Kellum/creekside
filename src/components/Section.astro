@@ -1,0 +1,31 @@
+---
+interface Props {
+  class?: string;
+  background?: 'white' | 'off-white' | 'gray' | 'primary';
+  paddingY?: 'sm' | 'md' | 'lg' | 'xl';
+}
+
+const {
+  class: className = '',
+  background = 'white',
+  paddingY = 'lg',
+} = Astro.props;
+
+const backgroundStyles = {
+  white: 'bg-white',
+  'off-white': 'bg-gray-50',
+  gray: 'bg-gray-100',
+  primary: 'bg-primary',
+};
+
+const paddingStyles = {
+  sm: 'py-8',
+  md: 'py-16',
+  lg: 'py-24',
+  xl: 'py-32',
+};
+---
+
+<section class={`${backgroundStyles[background]} ${paddingStyles[paddingY]} ${className}`}>
+  <slot />
+</section>

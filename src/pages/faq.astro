@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+import FAQ from '../components/FAQ.astro';
+
+const faqs = [
+  {
+    question: 'What amenities does Creekside RV Park offer?',
+    answer: 'We offer a wide range of amenities including full hookup sites (water, electric, and sewer), WiFi internet access, laundry facilities, a swimming pool, clubhouse, propane service, RV storage, and pet-friendly accommodations. Our park is designed to provide all the comforts of home while you enjoy your RV adventure.'
+  },
+  {
+    question: 'Do you offer different types of accommodations?',
+    answer: 'Yes! We offer full hookup RV sites with 30/50 amp service, pull-through and back-in sites, long-term and short-term stays, and secure RV storage. All sites feature spacious layouts with room for slideouts and outdoor activities.'
+  },
+  {
+    question: 'Is Creekside RV Park pet-friendly?',
+    answer: 'Absolutely! We welcome well-behaved pets at Creekside RV Park. We ask that all pets be kept on a leash when outside and that owners clean up after their pets. Some breed and size restrictions may apply, so please contact us for specific details.'
+  },
+  {
+    question: 'What is the minimum length of stay required at the Park?',
+    answer: 'We welcome both short-term and long-term guests. Our minimum stay is typically one night for short-term visitors. For guests interested in extended stays or seasonal rentals, we offer special monthly rates. Contact us to discuss your specific needs and availability.'
+  },
+  {
+    question: 'Do I need a security deposit or is it possible for the Park to cancel my reservation?',
+    answer: 'A deposit may be required when booking your reservation. Our cancellation policy varies depending on the length of stay and season. We recommend reviewing our full cancellation policy when making your reservation. The park reserves the right to cancel reservations in cases of severe weather or other emergency situations, with full refunds provided.'
+  }
+];
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark">
+    <Container>
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Frequently Asked Questions
+        </h1>
+        <p class="text-lg text-white/90">
+          Find answers to common questions about Creekside RV Park
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- FAQs Section -->
+  <Section paddingY="lg">
+    <Container size="md">
+      <div class="bg-white rounded-lg shadow-sm p-6 md:p-8">
+        {faqs.map((faq, index) => (
+          <FAQ question={faq.question} answer={faq.answer} index={index} />
+        ))}
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark text-center">
+    <Container size="md">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+        Still Have Questions?
+      </h2>
+      <p class="text-lg mb-8 text-white/90">
+        Contact us directly and we'll be happy to help
+      </p>
+      <Button href="/contact" variant="secondary" size="lg">Contact Us</Button>
+    </Container>
+  </Section>
+</BaseLayout>

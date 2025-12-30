@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark">
+    <Container>
+      <div class="text-center max-w-3xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-white">
+          Accommodations
+        </h1>
+        <p class="text-lg text-white/90">
+          Discover our spacious RV sites, secure storage, and unique rental options
+        </p>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- RV Park Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div>
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/RV_MAP_original.webp"
+              alt="Creekside RV Park Site Map"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            RV Park
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p>
+              Welcome to the RV Park at Creekside RV Park, where unparalleled convenience meets peaceful tranquility. Nestled near the heart of Jacksonville, our spacious and well-equipped RV Park offers a comfortable stay with the easy access to nearby towns. It is our mission to provide both the amenities you've come to expect from a top-rated RV park, like full hookups, 20/30/50 Amp electric, and a dump station, as well as the luxuries that will make your stay with us comfortable, like WiFi access, and clean, hot showers.
+            </p>
+            <p>
+              We pride ourselves on having designed our RV sites to accommodate all types of RVs, be it Class A motorhomes, fifth wheels, or pop-up campers. Each site caters to these accommodations with room for slide-outs and awnings, ensuring you have the space you need to settle in and enjoy your stay. Add to these amenities the charm of patios, BBQ grills & fire pits, and the availability of a laundry facility and playground and you have found your perfect RV haven at Creekside RV Park in Jacksonville. Come experience RVing as it should be: relaxed, comfortable, and full of natural beauty.
+            </p>
+          </div>
+          <Button href="/rates">View Rates</Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- RV Storage Section -->
+  <Section paddingY="lg" background="off-white">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Content -->
+        <div class="order-2 lg:order-1">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            RV Storage
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p class="font-semibold">
+              Creekside RV Park: Your Ultimate Destination for RV Storage and Adventure
+            </p>
+            <p>
+              At Creekside RV Park, we understand the needs of RV enthusiasts. That's why we proudly offer <strong>on-site RV storage</strong>, providing added convenience and easy access between your adventurous trips. Our secure RV storage facilities ensure that your vehicle is well-protected, allowing you to enjoy peace of mind while you're away. Whether you're a weekend warrior or a full-time traveler, Creekside RV Park is your go-to destination for hassle-free RV storage. Experience the perfect blend of comfort and convenience as you explore the beautiful outdoors, knowing your RV is safely stored just moments away. Come visit us today and discover why Creekside RV Park is the ideal choice for all your RV needs!
+            </p>
+          </div>
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer">Book Your Stay</Button>
+        </div>
+
+        <!-- Image -->
+        <div class="order-1 lg:order-2">
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/creek.webp"
+              alt="Secure RV Storage at Creekside"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- Airstreams & More Section -->
+  <Section paddingY="lg">
+    <Container>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image -->
+        <div>
+          <div class="aspect-video rounded-lg overflow-hidden bg-gray-200">
+            <img
+              src="/creek.webp"
+              alt="Unique RV accommodations"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">
+            Airstreams & More
+          </h2>
+          <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+            <p>
+              At Creekside RV Park in Jacksonville, we offer a special haven for those who travel with their home-on-wheels, the much-beloved RV homes. Nestling in an environment that's both natural and homely, our park provides a haven of tranquility for the wandering spirit in you. Offering fully serviced pitches with 20/30/50 Amp electric, a dump station, water, and a convenient sewer hookup, we've ensured that all your bases are covered for a comfortable and hassle-free stay.
+            </p>
+            <p>
+              Each of our home sites is thoughtfully positioned, offering both a sense of community and personal space. They come complete with BBQ grills, perfect for outdoor living, and access to WiFi, and laundry facilities, ensuring that your daily life carries on uninterrupted. At Creekside RV Park, you also have access to all of our park-wide amenities - from the sparkling playground, laundry room and more. A stay at Creekside RV Park is a seamless blend of homey comforts and the enticing call of the open road. We invite you to set down your jacks, relax, and experience Jacksonville from the unique perspective of your site at Creekside RV Park.
+            </p>
+          </div>
+          <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer">Book Your Stay</Button>
+        </div>
+      </div>
+    </Container>
+  </Section>
+
+  <!-- CTA Section -->
+  <Section paddingY="lg" class="bg-gradient-to-br from-primary to-primary-dark text-center">
+    <Container size="md">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+        Plan Your RV Adventure Today!
+      </h2>
+      <p class="text-lg mb-8 text-white/90">
+        Contact us to find out more about our rates, availability, and special offers
+      </p>
+      <Button href="https://resnexus.com/resnexus/reservations/book/60F5DE81-09F9-4DFE-BF33-5E79B3B2E6EF/" target="_blank" rel="noopener noreferrer" variant="secondary" size="lg">Book Your Stay</Button>
+    </Container>
+  </Section>
+</BaseLayout>
