@@ -86,8 +86,8 @@ const currentPath = Astro.url.pathname;
     </nav>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden pb-4">
-      <ul class="space-y-3">
+    <div id="mobile-menu" class="md:hidden overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0; opacity: 0;">
+      <ul class="space-y-3 pb-4">
         {navLinks.map((link) => (
           <li>
             <a
@@ -116,8 +116,22 @@ const currentPath = Astro.url.pathname;
 <script>
   const button = document.getElementById('mobile-menu-button');
   const menu = document.getElementById('mobile-menu');
+  const menuContent = menu?.querySelector('ul');
 
   button?.addEventListener('click', () => {
-    menu?.classList.toggle('hidden');
+    if (!menu) return;
+
+    const isOpen = menu.style.maxHeight !== '0px' && menu.style.maxHeight !== '';
+
+    if (isOpen) {
+      // Close
+      menu.style.maxHeight = '0';
+      menu.style.opacity = '0';
+    } else {
+      // Open
+      const height = menuContent?.scrollHeight || 0;
+      menu.style.maxHeight = height + 'px';
+      menu.style.opacity = '1';
+    }
   });
 </script>
